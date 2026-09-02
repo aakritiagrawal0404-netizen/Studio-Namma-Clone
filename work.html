@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./nav.css">
+  <style>
+    .content {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 99vw;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .content>h1 {
+      font-size: 70px;
+
+    }
+
+    .animate {
+      transform: rotateX(90deg);
+      transition-duration: 3s;
+      transform-origin: bottom;
+      font-size: 60px;
+      text-align: center;
+    }
+
+    .animate.show {
+      transform: rotateX(0deg);
+    }
+    .slideImage {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 500px) {
+      .slideImage {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        overflow: hidden;
+      }
+    }
+
+    .slideImage>div>img {
+      height: 500px;
+      width: 100%;
+    }
+
+    .slideImage>div {
+      margin: 20px;
+
+    }
+
+    .slideImage>div>.left {
+      transform: translateX(-100%) translateY(50%) rotate(-30deg);
+      transition-duration: 3s;
+    }
+
+    .slideImage>div>.right {
+      transform: translateX(100%) translateY(20%) rotate(30deg);
+      transition-duration: 3s;
+    }
+    .content.art {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ensures flex children align to the left */
+  text-align: left;        /* Aligns text content inside elements to the left */
+  width: 100%;
+  padding-left: 2rem;      /* Optional: prevents text from sticking directly to the screen edge */
+}
+
+.content.art .animate.text {
+  text-align: left;
+  margin-left: 0;          /* Overrides any auto margins or centering */
+  width: auto;             /* Or 100% depending on whether you want full-width containers */
+}
+.archives{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 150px;
+    
+}
+.archives > div{
+    
+    height: 100px;
+    width: 150px;
+    
+    overflow: hidden;
+    position: relative;
+
+}
+.archives img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+    </style>
+</head>
+<body>
+    <section class="content">
+    <h1 class="animate">OUR</h1>
+    <h1 class="animate">GAME</h1>
+    
+  </section>
+   <section class="slideImage">
+    <div>
+      <img class="left"
+        src="https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bb0be00336912e360b324f_main%20case%20cover%20matera%20(1).webp"
+        alt="">
+    </div>
+    <div>
+      <img class="right"
+        src="https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bb0be00336912e360b324f_main%20case%20cover%20matera%20(1).webp"
+        alt="">
+    </div>
+    <div>
+      <img class="left"
+        src="https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bb0be00336912e360b324f_main%20case%20cover%20matera%20(1).webp"
+        alt="">
+    </div>
+    <div>
+      <img class="right"
+        src="https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bb0be00336912e360b324f_main%20case%20cover%20matera%20(1).webp"
+        alt="">
+    </div>
+  </section><br><br><br>
+  
+  <div class="content art">
+    <h1 class="animate text">MALIBOU</h1>
+    <h1 class="animate text">ZEFIR</h1>
+    <h1 class="animate text">HEYSIMON</h1>
+    <h1 class="animate text">OSOL</h1>
+    <h1 class="animate text">SUPERCOMICS</h1>
+    <h1 class="animate text">SILVR</h1>
+    <h1 class="animate text">MATERA</h1>
+    <h1 class="animate text">ORUS ENERGY</h1>
+    <h1 class="animate text">CHANCE</h1>
+    <h1 class="animate text">INTRAMUROS</h1>
+  </div>
+<br><br><br><br><br><br><br>
+  <div class="archives">
+  
+    <div class="a1"><img src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68cd2a544d83b2e8ad7f5b24_qonto_ad.webp" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68cd2a544d83b2e8ad7f5b24_qonto_ad-p-500.webp 500w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68cd2a544d83b2e8ad7f5b24_qonto_ad-p-800.webp 800w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68cd2a544d83b2e8ad7f5b24_qonto_ad.webp 960w" alt="" class="archives_visual"></div>
+    <div class="a2"><img src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/688273958d98b7f2dbbf06b8_imgi_165_lg_original-88b4fd103662a10ecda931aba3917b5f.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/688273958d98b7f2dbbf06b8_imgi_165_lg_original-88b4fd103662a10ecda931aba3917b5f-p-500.avif 500w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/688273958d98b7f2dbbf06b8_imgi_165_lg_original-88b4fd103662a10ecda931aba3917b5f.avif 1408w" alt="A person holding a smart phone and a Qonto credit card." class="archives_visual"></div>
+    <div class="a3"><img src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/688272c11d835f9c411cfc61_Qonto_footer-ezgif.com-video-to-gif-converter.gif" loading="lazy" alt="Qonto logo gif" class="archives_visual"></div>
+    <div class="a3"></div>
+    <div class="a3"></div>
+    <div class="a3"></div>
+    <div class="a3"><img src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19d66af560b826a2638_650ae41a29e0a1ecff8f3ea2_03_Alan_DesignStudio_OOH.webp" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19d66af560b826a2638_650ae41a29e0a1ecff8f3ea2_03_Alan_DesignStudio_OOH-p-500.webp 500w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19d66af560b826a2638_650ae41a29e0a1ecff8f3ea2_03_Alan_DesignStudio_OOH-p-800.webp 800w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19d66af560b826a2638_650ae41a29e0a1ecff8f3ea2_03_Alan_DesignStudio_OOH-p-1080.webp 1080w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19d66af560b826a2638_650ae41a29e0a1ecff8f3ea2_03_Alan_DesignStudio_OOH-p-1600.webp 1600w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19d66af560b826a2638_650ae41a29e0a1ecff8f3ea2_03_Alan_DesignStudio_OOH-p-2000.webp 2000w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19d66af560b826a2638_650ae41a29e0a1ecff8f3ea2_03_Alan_DesignStudio_OOH-p-2600.webp 2600w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19d66af560b826a2638_650ae41a29e0a1ecff8f3ea2_03_Alan_DesignStudio_OOH.webp 2784w" alt="Visuals of https://alan.com/" class="archives_visual"></div>
+    <div class="a3"><img src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19173780480f0f4512f_650af3adee52648ea362656b_13%2614_Alan_DesignStudio_Apps.webp" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19173780480f0f4512f_650af3adee52648ea362656b_13%2614_Alan_DesignStudio_Apps-p-500.webp 500w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19173780480f0f4512f_650af3adee52648ea362656b_13%2614_Alan_DesignStudio_Apps-p-800.webp 800w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19173780480f0f4512f_650af3adee52648ea362656b_13%2614_Alan_DesignStudio_Apps-p-1080.webp 1080w, https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/6883a19173780480f0f4512f_650af3adee52648ea362656b_13%2614_Alan_DesignStudio_Apps.webp 1372w" alt="Visual of Alan chat" class="archives_visual"></div>
+    <div class="a3"></div>
+    <div class="a3"></div>
+    <div class="a3"></div>
+    <div class="a3"></div>
+    <div class="a3"></div>
+    <div class="a3"></div>
+  </div>
+</body>
+<script src="navbar.js"></script>
+<script>
+  let texts = document.querySelectorAll(".content > .animate");
+  let images = document.querySelectorAll(".slideImage > div > img")
+
+
+
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting == true) {
+        entry.target.classList.add("show")
+      }
+      else {
+        entry.target.classList.remove("show")
+      }
+    })
+  })
+
+  texts.forEach((text) => {
+    observer.observe(text);
+  })
+  
+   let observer2 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting == true) {
+        entry.target.style.transform = "translateX(0%)"
+      }
+    })
+  })
+
+  images.forEach((img) => {
+    observer2.observe(img)
+  })
+
+   let service = document.querySelectorAll(".art > .animate");
+
+  service.forEach((element) => {
+    console.log(element)
+    element.addEventListener("mouseenter", (event) => {
+      console.log(event.target.innerText)
+
+      service.forEach((text) => {
+        if (text.innerText != event.target.innerText) {
+          text.style.color = "gray"
+        }
+        else {
+          text.style.color = "black"
+        }
+      })
+
+    })
+  })
+  </script>
+</html>

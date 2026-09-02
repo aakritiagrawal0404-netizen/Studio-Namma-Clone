@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./nav.css">
+  <style>
+    .content {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 99vw;
+      align-items: center;
+      justify-content: center;
+     
+    }
+
+    .content>h1 {
+      font-size: 70px;
+
+    }
+.content>h2{
+  font-size: 30px;
+ text-align: left;
+
+}
+    .animate {
+      transform: rotateX(90deg);
+      transition-duration: 3s;
+      transform-origin: bottom;
+      font-size: 60px;
+      text-align: center;
+    }
+
+    .animate.show {
+      transform: rotateX(0deg);
+    }
+    .logos{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      align-items: center;
+      column-gap: 30px;
+    }
+    .logos > div{
+      height: 100px;
+      width: 120px;
+      
+      overflow: hidden;
+      position: relative;
+      align-items: center;
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+    .logos img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .contact-title {
+  margin: 15px 0 25px 0;
+}
+
+.contact-title h1 {
+ 
+  font-size: clamp(55px, 11vw, 130px);
+  line-height: 0.9;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.contact-title .inline-video-box {
+  width: 1.45em;
+  height: 0.75em;
+  border-radius: 4px;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 18px;
+}
+    </style>
+    </head>
+    <body>
+      <section class="content">
+    <h1 class="animate">SERIOUS</h1>
+    <h1 class="animate">SKILLS ONLY</h1>
+    
+  </section>
+  <section class="content">
+    
+    <h2 class="animate">
+      A vision is good.Flawless execution is better.<br>
+      At Namma, we don’t stack services —<br>
+      we align strengths.Design. Development. Copywriting. Marketing.<br>
+      À la carte or as a full strategy, everything moves in one direction:<br>
+      results. Need a bold identity? <br>
+      An award-winning website?A campaign that makes noise?<br>
+      We step in where it counts.We shift momentum.<br>
+      Crafted to be seen.Written to be felt.
+    </h2>
+  </section><br><br><br><br><br>
+  <div class="logos">
+    <div class="l1"><img src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68875740f7c110ecadd4b094_Webflow%20logo.avif"></div>
+    <div class="l1"><img src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/688758570a911fd133df93d7_ssfigma%20logo%201.avif"></div>
+    <div class="l1"><img src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/688764d4993489953bd52f1b_aaChatGPT%20Image%2028%20juil.%202025%2C%2013_48_56%201.avif"></div>
+    <div class="l1"><img src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68875b93baab84f03c840632_gsap%20logoo.avif"></div>
+  </div>
+  <br><br><br>
+  <br><br><br><br><br><br><br><br>
+  <div class="contact-title">
+    <h1>CRAFT AND</h1>
+    <h1><div class="inline-video-box">
+        <video src="https://i.makeagif.com/media/3-18-2022/G0VdMR.mp4" autoplay muted loop playsinline></video>
+      </div>NO-CODE</h1>
+    <h1>ORIENTED</h1>
+  </div>
+    </body>
+<script src="navbar.js"></script>
+<script>
+  let texts = document.querySelectorAll(".content > .animate");
+  let images = document.querySelectorAll(".slideImage > div > img")
+
+
+
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting == true) {
+        entry.target.classList.add("show")
+      }
+      else {
+        entry.target.classList.remove("show")
+      }
+    })
+  })
+
+  texts.forEach((text) => {
+    observer.observe(text);
+  })
+</script>
+</html>
